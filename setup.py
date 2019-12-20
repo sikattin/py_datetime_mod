@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 
-# Learn more: https://github.com/kennethreitz/setup.py
-
 from setuptools import setup, find_packages
 
 
@@ -12,12 +10,12 @@ with open('LICENSE') as f:
     license = f.read()
 
 setup(
-    name='datetime_orig',
+    name='datetime_skt',
     version='1.0',
-    description='module for operating date, datetime.',
-    long_description='module for operating date, datetime.',
+    description='module for operating datetime.',
+    long_description='module for operating datetime.',
     author='Takeki Shikano',
-    author_email='shikano.takeki@nexon.co.jp',
+    author_email='',
     url=None,
     license='MIT',
     packages=find_packages(exclude=('tests', 'docs'))

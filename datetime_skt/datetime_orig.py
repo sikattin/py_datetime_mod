@@ -56,7 +56,7 @@ class dateArithmetic(object):
         Returns:
             int型 西暦年
         """
-        return datetime.now().year
+        return datetime.now().strftime('%Y')
 
     def get_month(self):
         """現在の月を返す.
@@ -64,7 +64,7 @@ class dateArithmetic(object):
         Returns:
             int型 月
         """
-        return datetime.now().month
+        return datetime.now().strftime('%m')
 
     def get_day(self):
         """現在の日を返す.
@@ -72,4 +72,41 @@ class dateArithmetic(object):
         Returns:
             int型 日
         """
-        return datetime.now().day
+        return datetime.now().strftime('%d')
+
+    def get_hour(self):
+        """現在の時を返す.
+
+        Returns:
+            int型 時(24時間表示)
+        """
+        return datetime.now().strftime('%H')
+
+    def get_minute(self):
+        """現在の分を返す.
+
+        Returns:
+            int型 分
+        """
+        return datetime.now().strftime('%M')
+
+    def get_second(self):
+        """現在の秒を返す.
+
+        Returns:
+            int型 秒
+        """
+        return datetime.now().strftime('%S')
+
+    def get_now_full(self):
+        """現在の年月日時分秒を連結して返す.
+
+        Returns:
+            str 年月日時分(201801012330)
+        """
+        return "{0}{1}{2}{3}{4}".format(self.get_year(),
+                                            self.get_month(),
+                                            self.get_day(),
+                                            self.get_hour(),
+                                            self.get_minute())
+
